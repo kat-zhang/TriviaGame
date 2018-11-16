@@ -1,84 +1,84 @@
 var quizContent = [
 
-    {   question: "Is this my first question?",
+    {   question: "Who were Harry Potter's parents?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "James and Lilly",
+            b: "Tom and Margaret",
+            c: "William and Mary",
+            d: "Henry and Elizabeth"
         },
-        theAnswer: "choiceX"
+        theAnswer: "a"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "Which creatures guard Azkaban, the Wizarding prison?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Animagi",
+            b: "Dementors",
+            c: "Death Eaters",
+            d: "Hippogriffs"
         },
-        theAnswer: "choiceX"
+        theAnswer: "b"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "What is Lord Voldemort's true identity?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Lucius Malfoy",
+            b: "Gellert Grindelwald",
+            c: "Tom Riddle",
+            d: "Sirius Black"
         },
-        theAnswer: "choiceX"
+        theAnswer: "c"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "Which of Harry's friends becomes a professor at Hogwarts?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Hermione Granger",
+            b: "Cho Chang",
+            c: "Cedric Diggory",
+            d: "Neville Longbottom"
         },
-        theAnswer: "choiceX"
+        theAnswer: "d"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "What are the three Unforgiveable Curses?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Avada Kedavra, Expecto Patronum, and Imperio",
+            b: "Expelliarmus, Obliviate, and Sectumsempra",
+            c: "Avada Kedavra, Crucio, and Imperio",
+            d: "Accio, Crucio, and Riddikulus"
         },
-        theAnswer: "choiceX"
+        theAnswer: "c"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Werewolf",
+            b: "Muggle",
+            c: "Vampire",
+            d: "Giant"
         },
-        theAnswer: "choiceX"
+        theAnswer: "a"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "How many points are rewarded to a Quidditch team once its Seeker catches the Golden Snitch?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "500",
+            b: "150",
+            c: "70",
+            d: "30"
         },
-        theAnswer: "choiceX"
+        theAnswer: "b"
     }, 
     
-    {   question: "Is this my first question?",
+    {   question: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
         choices: {
-            a: "choice1",
-            b: "choice2",
-            c: "choice3",
-            d: "choice4"
+            a: "Basilisk",
+            b: "Acromantula",
+            c: "Troll",
+            d: "Dragon"
         },
-        theAnswer: "choiceX"
+        theAnswer: "a"
     }
     
-    
+
 ];
