@@ -54,5 +54,9 @@ var quizContent = [
 ];
 
 
+///console.log(quizContent[3]); >> entire object in index
+///console.log(quizContent[3].question); >> the property to the key for question
+///console.log(quizContent[3].choices); >> the property to the key for choice, an array
+///console.log(quizContent[3].theAnswer); >> the property to the key theAnswer 
 
 
