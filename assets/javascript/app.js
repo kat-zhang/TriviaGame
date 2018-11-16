@@ -1,6 +1,7 @@
 var quizContent = [
 
-    {   question: "Who were Harry Potter's parents?",
+    { 
+        question: "Who were Harry Potter's parents?",
         choices: {
             a: "James and Lilly",
             b: "Tom and Margaret",
@@ -10,7 +11,8 @@ var quizContent = [
         theAnswer: "a"
     }, 
     
-    {   question: "Which creatures guard Azkaban, the Wizarding prison?",
+    {   
+        question: "Which creatures guard Azkaban, the Wizarding prison?",
         choices: {
             a: "Animagi",
             b: "Dementors",
@@ -20,7 +22,8 @@ var quizContent = [
         theAnswer: "b"
     }, 
     
-    {   question: "What is Lord Voldemort's true identity?",
+    {   
+        question: "What is Lord Voldemort's true identity?",
         choices: {
             a: "Lucius Malfoy",
             b: "Gellert Grindelwald",
@@ -30,7 +33,8 @@ var quizContent = [
         theAnswer: "c"
     }, 
     
-    {   question: "Which of Harry's friends becomes a professor at Hogwarts?",
+    {   
+        question: "Which of Harry's friends becomes a professor at Hogwarts?",
         choices: {
             a: "Hermione Granger",
             b: "Cho Chang",
@@ -40,7 +44,8 @@ var quizContent = [
         theAnswer: "d"
     }, 
     
-    {   question: "What are the three Unforgiveable Curses?",
+    {   
+        question: "What are the three Unforgiveable Curses?",
         choices: {
             a: "Avada Kedavra, Expecto Patronum, and Imperio",
             b: "Expelliarmus, Obliviate, and Sectumsempra",
@@ -50,7 +55,8 @@ var quizContent = [
         theAnswer: "c"
     }, 
     
-    {   question: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
+    {   
+        question: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
         choices: {
             a: "Werewolf",
             b: "Muggle",
@@ -60,7 +66,8 @@ var quizContent = [
         theAnswer: "a"
     }, 
     
-    {   question: "How many points are rewarded to a Quidditch team once its Seeker catches the Golden Snitch?",
+    {   
+        question: "How many points are awarded in for catching the Golden Snitch?",
         choices: {
             a: "500",
             b: "150",
@@ -70,7 +77,8 @@ var quizContent = [
         theAnswer: "b"
     }, 
     
-    {   question: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
+    {   
+        question: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
         choices: {
             a: "Basilisk",
             b: "Acromantula",
@@ -78,7 +86,19 @@ var quizContent = [
             d: "Dragon"
         },
         theAnswer: "a"
-    }
+    } 
+
     
 
 ];
+
+
+
+
+////console.log(quizContent[3]); >>  the entire object
+////console.log(quizContent[3].question);  >>  "Which of Harry's friends becomes a professor at Hogwarts?"
+///console.log(quizContent[3]).choices); >> the object containing the choices for question 3
+///console.log(quizContent[3]).choices.c); >> the content of c: 
+///console.log(quizContent[3]).theAnswer); >> d 
+
+
