@@ -1,11 +1,15 @@
-var quizContent = [
+var correctAnswer = 0;
+var incorrectAnswer = 0;
+var noAnswer = 0;
+var count = 30;
 
-    { 
+var quizContent = [
+    {
         question: "Who were Harry Potter's parents?",
         choices: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
         theAnswer: "James and Lilly"
     }, 
-    
+
     {   
         question: "Which creatures guard Azkaban, the Wizarding prison?",
         choices: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
@@ -52,6 +56,26 @@ var quizContent = [
     } 
 
 ];
+
+var quizBox = $("#quiz-area");
+var showQuestion;
+var count= 0,
+$("#start-quiz").click(displayQuestion);
+
+function displayQuestion(){
+    $(quizBox).html(`<p> ${quizContent.questions[count]} </p>`);
+    $(quizBox).html(`<p> ${quizContent.questions[count].choices} </p>`);
+}
+// function nextQuestion(){
+//     $(quizBox).html(`<p> "Your answer is" + ${result} </p>`);
+// }
+
+
+class="anybutton"
+
+
+$(".anybutton").click(la)
+
 
 
 ///console.log(quizContent[3]); >> entire object in index
