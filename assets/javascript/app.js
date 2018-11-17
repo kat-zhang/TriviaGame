@@ -2,7 +2,8 @@ var correctAnswer = 0;
 var incorrectAnswer = 0;
 var noAnswer = 0;
 var countTime = 30;
-var countQuestions =
+var questionNumber = 0;
+
 
 var quizContent = [
     {
@@ -58,25 +59,32 @@ var quizContent = [
 
 ];
 
+var choicesArray = quizContent[0].choices;
+console.log("nested array", choicesArray);
 var quizBox = $("#quiz-area");
 var showQuestion;
-var count= 0,
 
 $("#start-quiz").click(function(){
 $(this).hide();
-counter = setInterval(timer, 3000);
+$(quizBox).attr("<p id='timer'>");
+countTime = setInterval(timer, 3000);
 showQuestion();
 });
 
 function timer(){
 countTime--;
-if (count <= 0) {
+if (countTime <= 0) {
     clearInterval(countTime);
     return;
 }
 $("#timer").html(`Time remaining: 00: ${countTime} seconds`);
 }
 
+function showQuestion() {
+    $(quizBox).html(quizContent[0].question);
+questionNumber++;
+
+}
 
 
 
