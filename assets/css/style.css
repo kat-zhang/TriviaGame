@@ -1,0 +1,35 @@
+body{
+    box-align: center;
+    box-sizing: border-box;
+    background-color: #cccc;
+}
+header {
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(83, 13, 13);
+    color: rgb(230, 155, 15);
+}
+
+#stats{
+    height: 75px;
+    border: 3px solid white;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: auto;
+}
+
+.time-out{}
+.answer-stats{}
+.correct{}
+.incorrect{}
+
+#quiz-area{}
+.questions{}
+.choices{}
+
