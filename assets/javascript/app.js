@@ -1,7 +1,8 @@
 var correctAnswer = 0;
 var incorrectAnswer = 0;
 var noAnswer = 0;
-var count = 30;
+var countTime = 30;
+var countQuestions =
 
 var quizContent = [
     {
@@ -60,21 +61,26 @@ var quizContent = [
 var quizBox = $("#quiz-area");
 var showQuestion;
 var count= 0,
-$("#start-quiz").click(displayQuestion);
 
-function displayQuestion(){
-    $(quizBox).html(`<p> ${quizContent.questions[count]} </p>`);
-    $(quizBox).html(`<p> ${quizContent.questions[count].choices} </p>`);
+$("#start-quiz").click(function(){
+$(this).hide();
+counter = setInterval(timer, 3000);
+showQuestion();
+});
+
+function timer(){
+countTime--;
+if (count <= 0) {
+    clearInterval(countTime);
+    return;
 }
-// function nextQuestion(){
-//     $(quizBox).html(`<p> "Your answer is" + ${result} </p>`);
-// }
+$("#timer").html(`Time remaining: 00: ${countTime} seconds`);
+}
 
 
-class="anybutton"
 
 
-$(".anybutton").click(la)
+
 
 
 
