@@ -14,6 +14,7 @@ var quizContent = {
     timerStart: false,
     correct: 0,
     incorrect: 0,
+    questionNo: 0,
 
     questions: {
 
@@ -51,7 +52,9 @@ var quizContent = {
         no8: "150"
     },
 
-    startQuiz:,
+    startQuiz: function() {
+        quizContent:
+    }
 
     startTimer:,
 
