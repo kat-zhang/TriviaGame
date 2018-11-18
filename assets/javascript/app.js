@@ -6,6 +6,7 @@
 //incorrect ++ if time up or wrong choice.  show right answer 
 //correct++
 //methods startQuiz confirmAnswer 
+$("#timer").hide(); //show when startQuiz
 $("#start-quiz").on("click", quizContent.startQuiz);
 
 
@@ -15,6 +16,7 @@ var quizContent = {
     correct: 0,
     incorrect: 0,
     questionNo: 0,
+    
 
     questions: {
 
@@ -52,15 +54,35 @@ var quizContent = {
         no8: "150"
     },
 
+    //once the quiz starts by clicking start button...
     startQuiz: function() {
-        quizContent:
-    }
+        quizContent.questionNo = 0;
+        quizContent.correct = 0;
+        quizContent.incorrect = 0;
+        clearInterval(quizContent.timerCount);
+        
+        $("#start-quiz").hide();
+        $("quiz-area").show();
+        $("#surprise").empty();
+        $("#timer").text("seconds left: " + quizContent.timerCount);
+        
+        
+        quizContent.renderQuestion();
 
-    startTimer:,
+    },
+
+    renderQuestion: function(){
+
+        quizContent.timerCount = 20;
+        $("#timer").text("seconds left: " + quizContent.timerCount);
+
+
+
+    },
 
     checkAnswer:,
 
-    nextQuestion:,
+    renderQuestion:,
 
 
 

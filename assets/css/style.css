@@ -5,7 +5,7 @@
 body {
     box-align: center;
     background-color: gainsboro;
-    
+    background-image: url(..images)
 }
 #quiz-title {
     color:  rgb(153, 11, 11); 
@@ -40,6 +40,7 @@ body {
     padding-left: 25%;
     padding-right: 25%;
 }
-button {
+.btn {
+    transition: none;
     width: 100%;
 }
