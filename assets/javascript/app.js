@@ -2,7 +2,11 @@
 ///hide timer no countdown until click start
 ///display questions and timer when click start
 ///beginning stats 0 to increment, timer 30 to decrement
-if 
+//show next question when answer clicked or time up
+//incorrect ++ if time up or wrong choice.  show right answer 
+//correct++
+//methods startQuiz confirmAnswer 
+$("#start-quiz").on("click", quizContent.startQuiz);
 
 
 var quizContent = {
@@ -47,8 +51,17 @@ var quizContent = {
         no8: "150"
     },
 
-    function startQuiz()
-   $("#start-quiz").on("click", quizContent.startQuiz);
+    startQuiz:,
+
+    startTimer:,
+
+    checkAnswer:,
+
+    nextQuestion:,
+
+
+
+   
 }
  
 
