@@ -1,37 +1,45 @@
-var correctAnswer = 0;
-var incorrectAnswer = 0;
-var noAnswer = 0;
-var countTime = 30;
-var questionNumber = 0;
 
 
-var quizContent = [
+var quizContent =
+
+questions: {
+    no1: "Who were Harry Potter's parents?",
+    no2: "What type of creatures guard the wizarding prison Azkaban?",
+    no3: "What is Lord Voldemort's true identity?",
+    no4: "Which of Harry's friends becomes a professor at Hogwarts?",
+    no5: "Which of Harry's friends becomes a professor at Hogwarts?",
+    no6: "What are the three Unforgiveable Curses?",
+    no7: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
+    no8: "How many points are awarded in for catching the Golden Snitch?",
+}
+
+[
     {
-        question: "Who were Harry Potter's parents?",
+        question: 
         choices: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
         theAnswer: "James and Lilly"
     }, 
 
     {   
-        question: "Which creatures guard Azkaban, the Wizarding prison?",
+        question: 
         choices: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
         theAnswer: "Death Eaters"
     }, 
     
     {   
-        question: "What is Lord Voldemort's true identity?",
+        question: 
         choices: ["Lucius Malfoy","Gellert Grindelwald", "Tom Riddle","Sirius Black"],
         theAnswer: "Tom Riddle"
     }, 
     
     {   
-        question: "Which of Harry's friends becomes a professor at Hogwarts?",
+        question: 
         choices: ["Hermione Granger","Cho Chang","Cedric Diggory","Neville Longbottom"], 
         theAnswer: "Neville Longbottom"
     }, 
     
     {   
-        question: "What are the three Unforgiveable Curses?",
+        question: 
         choices: ["Avada Kedavra, Expecto Patronum, and Imperio",
         "Expelliarmus, Obliviate, and Sectumsempra",
         "Avada Kedavra, Crucio, and Imperio",
@@ -40,13 +48,13 @@ var quizContent = [
     }, 
     
     {   
-        question: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
+        question: 
         choices: ["Werewolf","Muggle","Vampire","Giant"],
         theAnswer: "Werewolf"
     }, 
     
     {   
-        question: "How many points are awarded in for catching the Golden Snitch?",
+        question:
         choices: ["500","150","70","30"],
         theAnswer: "150"
     }, 
@@ -59,36 +67,12 @@ var quizContent = [
 
 ];
 
-var choicesArray = quizContent[0].choices;
-console.log("nested array", choicesArray);
-var quizBox = $("#quiz-area");
-var showQuestion;
 
-$("#start-quiz").click(function(){
-$(this).hide();
-$(quizBox).attr("<p id='timer'>");
-countTime = setInterval(timer, 3000);
-showQuestion();
-});
+//console.log(correctChoices);
 
-function timer(){
-countTime--;
-if (countTime <= 0) {
-    clearInterval(countTime);
-    return;
-}
-$("#timer").html(`Time remaining: 00: ${countTime} seconds`);
-}
+// function startQuiz(){
 
-function showQuestion() {
-    $(quizBox).html(quizContent[0].question);
-questionNumber++;
-
-}
-
-
-
-
+// }
 
 
 

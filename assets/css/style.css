@@ -1,60 +1,45 @@
 *{
-    text-align: center;
     box-align: center;
-    box-sizing: border-box;
-} 
-
-body{
-    background-color:  #555270;
-    background-image: url(../images/bgimage.jpg);
-    display: inline-block;
-    
 }
 
-
-
-#main-container {
-    width: 980px;
-    height: 1000px;
-    background-color: #555270;
-    color: rgb(241, 175, 52); 
-
-}
-
-#start-quiz {
-  
-    border: none;
-    width: 250px;
-    height: 75px;
-    font-size: 18px;
-    margin-top: 50%;
-    margin-bottom: 50%;
-    display: inline-block;
+body {
+    box-align: center;
+    background-color: gainsboro;
     
 }
 #quiz-title {
-    position: fixed;
-    width: 980px;
-    height: auto;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color:rgb(22, 22, 22);
-    color:  rgb(241, 175, 52); 
-
-} 
-
-
-.time-out{}
-.answer-stats{}
-.correct{}
-.incorrect{}
-
-#quiz-area{
-    width: inherit;
-    height: 100%;
-    background-color: #555270
-    
+    color:  rgb(153, 11, 11); 
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 48px;
+    text-align: center;
+    padding-top: 15px;
 }
-.questions{}
-.choices{}
 
+#main-container {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+#start-quiz {
+    box-align: center;
+    font-weight: bold;
+    background-color: rgb(243, 188, 49);
+    border-style: none;
+    border-image: none;
+}
+#timer { 
+    text-align: center;
+}
+#quiz-area {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#answerchoices {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+button {
+    width: 100%;
+}
