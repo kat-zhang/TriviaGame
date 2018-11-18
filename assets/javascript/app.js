@@ -1,71 +1,44 @@
 
 
-var quizContent =
+var quizContent = {
+ timerCount: 30,
+ timerStart: false,
+ correct: 0,
+ incorrect: 0 ,
 
 questions: {
     no1: "Who were Harry Potter's parents?",
     no2: "What type of creatures guard the wizarding prison Azkaban?",
-    no3: "What is Lord Voldemort's true identity?",
+    no3: "What is Lord Voldemort's true identity?", 
     no4: "Which of Harry's friends becomes a professor at Hogwarts?",
-    no5: "Which of Harry's friends becomes a professor at Hogwarts?",
-    no6: "What are the three Unforgiveable Curses?",
-    no7: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
-    no8: "How many points are awarded in for catching the Golden Snitch?",
-}
+    no5: "What are the three Unforgiveable Curses?",
+    no6: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
+    no7: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
+    no8: "How many points are awarded in for catching the Golden Snitch?"
+},
 
-[
-    {
-        question: 
-        choices: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
-        theAnswer: "James and Lilly"
-    }, 
+choices: {
+    no1: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
+    no2: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
+    no3: ["Lucius Malfoy","Gellert Grindelwald", "Tom Riddle","Sirius Black"],
+    no4: ["Hermione Granger","Cho Chang","Cedric Diggory","Neville Longbottom"], 
+    no5: ["Avada Kedavra, Expecto Patronum, and Imperio","Expelliarmus, Obliviate, and Sectumsempra","Avada Kedavra, Crucio, and Imperio","Accio, Crucio, and Riddikulus"],
+    no6: ["Werewolf","Muggle","Vampire","Giant"],
+    no7: ["Basilisk","Acromantula","Troll","Dragon"]
+    no8:
+},
 
-    {   
-        question: 
-        choices: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
-        theAnswer: "Death Eaters"
-    }, 
-    
-    {   
-        question: 
-        choices: ["Lucius Malfoy","Gellert Grindelwald", "Tom Riddle","Sirius Black"],
-        theAnswer: "Tom Riddle"
-    }, 
-    
-    {   
-        question: 
-        choices: ["Hermione Granger","Cho Chang","Cedric Diggory","Neville Longbottom"], 
-        theAnswer: "Neville Longbottom"
-    }, 
-    
-    {   
-        question: 
-        choices: ["Avada Kedavra, Expecto Patronum, and Imperio",
-        "Expelliarmus, Obliviate, and Sectumsempra",
-        "Avada Kedavra, Crucio, and Imperio",
-        "Accio, Crucio, and Riddikulus"],
-        theAnswer: "Avada Kedavra, Crucio, and Imperio"
-    }, 
-    
-    {   
-        question: 
-        choices: ["Werewolf","Muggle","Vampire","Giant"],
-        theAnswer: "Werewolf"
-    }, 
-    
-    {   
-        question:
-        choices: ["500","150","70","30"],
-        theAnswer: "150"
-    }, 
-    
-    {   
-        question: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
-        choices: ["Basilisk","Acromantula","Troll","Dragon"],
-        theAnswer: "Troll"
-    } 
+correctChoices: {
+    no1: "James and Lilly",
+    no2: "Death Eaters",
+    no3: "Tom Riddle",
+    no4: "Neville Longbottom",
+    no5: "Avada Kedavra, Crucio, and Imperio",
+    no6: "Werewolf"
+    no7: "Troll",
+    no8: "150"
+},
 
-];
 
 
 //console.log(correctChoices);
