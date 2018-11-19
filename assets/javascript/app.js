@@ -1,96 +1,136 @@
+var quizContent = [
 
-///hide timer no countdown until click start
-///display questions and timer when click start
-///beginning stats 0 to increment, timer 30 to decrement
-//show next question when answer clicked or time up
-//incorrect ++ if time up or wrong choice.  show right answer 
-//correct++
-//methods startQuiz confirmAnswer 
-$("#timer").hide(); //show when startQuiz
-$("#start-quiz").on("click", quizContent.startQuiz);
-
-
-var quizContent = {
-    timerCount: 30,
-    timerStart: false,
-    correct: 0,
-    incorrect: 0,
-    questionNo: 0,
+    { 
+        question: "Who were Harry Potter's parents?",
+        choices: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
+        theAnswer: "James and Lilly"
+    }, 
     
-
-    questions: {
-
-        no1: "Who were Harry Potter's parents?",
-        no2: "What type of creatures guard the wizarding prison Azkaban?",
-        no3: "What is Lord Voldemort's true identity?", 
-        no4: "Which of Harry's friends becomes a professor at Hogwarts?",
-        no5: "What are the three Unforgiveable Curses?",
-        no6: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
-        no7: "What magical creature snuck into Hogwarts on Halloween during Harry's first year?",
-        no8: "How many points are awarded in for catching the Golden Snitch?"
-    },
-
-    choices: {
-
-        no1: ["James and Lilly","Tom and Margaret","William and Mary","Henry and Elizabeth"],
-        no2: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
-        no3: ["Lucius Malfoy","Gellert Grindelwald", "Tom Riddle","Sirius Black"],
-        no4: ["Hermione Granger","Cho Chang","Cedric Diggory","Neville Longbottom"], 
-        no5: ["Avada Kedavra, Expecto Patronum, and Imperio","Expelliarmus, Obliviate, and Sectumsempra","Avada Kedavra, Crucio, and Imperio","Accio, Crucio, and Riddikulus"],
-        no6: ["Werewolf","Muggle","Vampire","Giant"],
-        no7: ["Basilisk","Acromantula","Troll","Dragon"],
-        no8: ["200","30", "150", "75"]
-    },
-
-    correctChoices: {
-
-        no1: "James and Lilly",
-        no2: "Death Eaters",
-        no3: "Tom Riddle",
-        no4: "Neville Longbottom",
-        no5: "Avada Kedavra, Crucio, and Imperio",
-        no6: "Werewolf",
-        no7: "Troll",
-        no8: "150"
-    },
-
-    //once the quiz starts by clicking start button...
-    startQuiz: function() {
-        quizContent.questionNo = 0;
-        quizContent.correct = 0;
-        quizContent.incorrect = 0;
-        clearInterval(quizContent.timerCount);
-        
-        $("#start-quiz").hide();
-        $("quiz-area").show();
-        $("#surprise").empty();
-        $("#timer").text("seconds left: " + quizContent.timerCount);
-        
-        
-        quizContent.renderQuestion();
-
-    },
-
-    renderQuestion: function(){
-
-        quizContent.timerCount = 20;
-        $("#timer").text("seconds left: " + quizContent.timerCount);
-
-        if(!quizContent.timerStart){
-            quizContent.timerCount = setInterval(quizContent.runTimerStart, 1000*20)
-        }
-
-    },
-
+    {   
+        question: "Which creatures guard the Wizards' prison called Azkaban?",
+        choices: ["Animagi","Dementors","Death Eaters","Hippogriffs"],
+        theAnswer: "Death Eaters"
+    }, 
     
-    runTimerStart;,
-    renderQuestion:,
-    checkAnswer:,
-
-
+    {   
+        question: "What is Lord Voldemort's true identity?",
+        choices: ["Lucius Malfoy","Gellert Grindelwald", "Tom Riddle","Sirius Black"],
+        theAnswer: "Tom Riddle"
+    }, 
+    
+    {   
+        question: "Which of Harry's friends becomes a professor at Hogwarts?",
+        choices: ["Hermione Granger","Cho Chang","Cedric Diggory","Neville Longbottom"], 
+        theAnswer: "Neville Longbottom"
+    }, 
+    
+    {   
+        question: "What are the three Unforgiveable Curses?",
+        choices: ["Avada Kedavra, Expecto Patronum, and Imperio",
+        "Expelliarmus, Obliviate, and Sectumsempra",
+        "Avada Kedavra, Crucio, and Imperio",
+        "Accio, Crucio, and Riddikulus"],
+        theAnswer: "Avada Kedavra, Crucio, and Imperio"
+    }, 
+    
+    {   
+        question: "Professor Lupin, Harry's 3rd Year Defense Against the Dark Arts teacher is revealed to be half... :",
+        choices: ["Werewolf","Muggle","Vampire","Giant"],
+        theAnswer: "Werewolf"
+    }, 
+    
+    {   
+        question: "How many points are awarded in for catching the Golden Snitch?",
+        choices: ["500","150","70","30"],
+        theAnswer: "150"
+    }, 
+    
+    {   
+        question: "Which magical creature snuck onto school grounds on Halloween during Harry's first year at Hogwarts?",
+        choices: ["Basilisk","Acromantula","Troll","Dragon"],
+        theAnswer: "Troll"
+    } 
    
-}
- 
+];
+
+
+
+
+$("#start-quiz").on("click", renderQuestions);
+$("#start-quiz").on("click", renderChoices);
+
+
+function renderQuestions () {
+
+    $("#q1").text(quizContent[0].question);
+    $("#q2").text(quizContent[1].question);
+    $("#q3").text(quizContent[2].question);
+    $("#q4").text(quizContent[3].question);
+    $("#q5").text(quizContent[4].question);
+    $("#q6").text(quizContent[5].question);
+    $("#q7").text(quizContent[6].question);
+    $("#q8").text(quizContent[7].question);
+    
+    
+};
+
+function renderChoices () {
+
+    $("#q1a1").text(quizContent[0].choices[0]);
+    $("#q1a2").text(quizContent[0].choices[1]);
+    $("#q1a3").text(quizContent[0].choices[2]);
+    $("#q1a4").text(quizContent[0].choices[3]);
+    
+    $("#q2a1").text(quizContent[1].choices[0]);
+    $("#q2a2").text(quizContent[1].choices[1]);
+    $("#q2a3").text(quizContent[1].choices[2]);
+    $("#q2a4").text(quizContent[1].choices[3]);
+
+    $("#q3a1").text(quizContent[2].choices[0]);
+    $("#q3a2").text(quizContent[2].choices[1]);
+    $("#q3a3").text(quizContent[2].choices[2]);
+    $("#q3a4").text(quizContent[2].choices[3]);
+
+    $("#q4a1").text(quizContent[3].choices[0]);
+    $("#q4a2").text(quizContent[3].choices[1]);
+    $("#q4a3").text(quizContent[3].choices[2]);
+    $("#q4a4").text(quizContent[3].choices[3]);
+
+    $("#q5a1").text(quizContent[4].choices[0]);
+    $("#q5a2").text(quizContent[4].choices[1]);
+    $("#q5a3").text(quizContent[4].choices[2]);
+    $("#q5a4").text(quizContent[4].choices[3]);
+
+    $("#q6a1").text(quizContent[5].choices[0]);
+    $("#q6a2").text(quizContent[5].choices[1]);
+    $("#q6a3").text(quizContent[5].choices[2]);
+    $("#q6a4").text(quizContent[5].choices[3]);
+
+    $("#q7a1").text(quizContent[6].choices[0]);
+    $("#q7a2").text(quizContent[6].choices[1]);
+    $("#q7a3").text(quizContent[6].choices[2]);
+    $("#q7a4").text(quizContent[6].choices[3]);
+
+
+    $("#q8a1").text(quizContent[7].choices[0]);
+    $("#q8a2").text(quizContent[7].choices[1]);
+    $("#q8a3").text(quizContent[7].choices[2]);
+    $("#q8a4").text(quizContent[7].choices[3]);
+
+
+};
+
+
+
+
+
+console.log(quizContent[3].choices[1]);
+// function renderQuestions
+// var q = $("<p>");
+// q.addClass("question");
+
+
+
 
 
 
