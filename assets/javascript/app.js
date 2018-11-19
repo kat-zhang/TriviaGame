@@ -76,14 +76,16 @@ var quizContent = {
         quizContent.timerCount = 20;
         $("#timer").text("seconds left: " + quizContent.timerCount);
 
-
+        if(!quizContent.timerStart){
+            quizContent.timerCount = setInterval(quizContent.runTimerStart, 1000*20)
+        }
 
     },
 
-    checkAnswer:,
-
+    
+    runTimerStart;,
     renderQuestion:,
-
+    checkAnswer:,
 
 
    
