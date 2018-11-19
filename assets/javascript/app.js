@@ -117,11 +117,26 @@ function renderChoices () {
     $("#q8a3").text(quizContent[7].choices[2]);
     $("#q8a4").text(quizContent[7].choices[3]);
 
-
 };
 
+// var timerCount = 100;
+// var timerId;
+// $("#start-quiz").on("click", runTimer);
 
+// function runTimer() {
+//     timerId = setInterval(decrement, 1000);
 
+// }
+// function decrement() {
+//     timerCount--;
+//     $("#timer").text(timerCount + "seconds left");
+//     if (timerCount === 0) {
+//         stop();
+
+//         $("#quizdiv").empty();
+
+//     }
+// }
 
 
 console.log(quizContent[3].choices[1]);
