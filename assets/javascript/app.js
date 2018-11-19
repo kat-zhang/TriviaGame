@@ -76,7 +76,6 @@ function decrement() {
         clearInterval(timerId);
         $("#quizdiv").empty();
 
-       
     }
 }
 
@@ -141,11 +140,16 @@ function renderChoices () {
 };
 
 
+/// var correct
+/// var incorrect
+//submit on click - check answers
+/// if radio imput name === "correct" the. correct++
+/// else incorrect++
 
-console.log(quizContent[3].choices[1]);
-// function renderQuestions
-// var q = $("<p>");
-// q.addClass("question");
+//hide start button on.click
+//make start button refresh when time===0
+//
+
 
 
 
