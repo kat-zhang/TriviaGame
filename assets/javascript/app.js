@@ -59,6 +59,27 @@ var quizContent = [
 $("#start-quiz").on("click", renderQuestions);
 $("#start-quiz").on("click", renderChoices);
 
+var timerCount = 100;
+var timerId;
+$("#start-quiz").on("click", runTimer);
+
+function runTimer() {
+    timerId = setInterval(decrement, 1000);
+
+}
+
+function decrement() {
+    timerCount--;
+    $("#timer").text(timerCount + " SECONDS");
+    if (timerCount === 0) {
+    
+        clearInterval(timerId);
+        $("#quizdiv").empty();
+
+       
+    }
+}
+
 
 function renderQuestions () {
 
@@ -119,24 +140,6 @@ function renderChoices () {
 
 };
 
-// var timerCount = 100;
-// var timerId;
-// $("#start-quiz").on("click", runTimer);
-
-// function runTimer() {
-//     timerId = setInterval(decrement, 1000);
-
-// }
-// function decrement() {
-//     timerCount--;
-//     $("#timer").text(timerCount + "seconds left");
-//     if (timerCount === 0) {
-//         stop();
-
-//         $("#quizdiv").empty();
-
-//     }
-// }
 
 
 console.log(quizContent[3].choices[1]);
